@@ -2,485 +2,518 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sreehitha Madiraju | AI/ML × Product × UX</title>
-<meta name="description" content="Sreehitha Madiraju — AI/ML undergraduate, product thinker and UI/UX designer.">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Sreehitha Madiraju — AI/ML × Product × UI/UX portfolio">
+<title>Sreehitha Madiraju — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#070607;
-  --surface:#100b0d;
-  --surface2:#151012;
-  --line:#302124;
-  --muted:#aaa0a2;
-  --text:#f7f3f4;
-  --red:#c51f35;
-  --red2:#ef334c;
-  --red-soft:#5c1622;
+:root{--base-font:16px;
+  --bg:#080808;--panel:#0d0d0f;--panel2:#111114;--line:#29292d;
+  --text:#f5f3f5;--muted:#99979e;--soft:#d1ced5;--accent:#fff;
+  --focus:#e9e4ec;--radius:16px;--rail:124px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  background:
-    radial-gradient(circle at 78% 0%,rgba(197,31,53,.16),transparent 30%),
-    radial-gradient(circle at 0% 48%,rgba(197,31,53,.07),transparent 24%),
-    var(--bg);
-  color:var(--text);
-  font-family:"DM Sans",sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-a{color:inherit;text-decoration:none}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;font-size:var(--base-font);line-height:1.65;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.18;
+background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+background-size:42px 42px;mask-image:linear-gradient(#000,transparent 80%)}
+a{text-decoration:none;color:inherit}
 button{font:inherit}
-.container{width:min(1160px,92%);margin:auto}
-.noise{position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:100;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+svg{display:block}
+::selection{background:#fff;color:#000}
 
-/* NAV */
-nav{
-  position:fixed;top:18px;left:50%;transform:translateX(-50%);
-  z-index:90;width:min(1120px,92%);padding:11px 14px;
-  border:1px solid #352529;border-radius:18px;
-  background:rgba(9,7,8,.78);backdrop-filter:blur(18px);
-  box-shadow:0 15px 60px rgba(0,0,0,.55)
-}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font:700 1.05rem "Space Grotesk",sans-serif}
-.logo span{color:var(--red2)}
-nav ul{display:flex;gap:25px;list-style:none;color:#bcb2b4;font-size:.86rem}
-nav ul a{transition:.2s}
-nav ul a:hover{color:#fff}
-.resume-nav{padding:8px 13px;border:1px solid var(--red);border-radius:11px;background:#260e13;font-weight:700;font-size:.82rem}
-.menu{display:none;border:0;background:transparent;color:#fff;font-size:1.25rem;cursor:pointer}
+/* RAIL */
+.rail{position:fixed;left:0;top:0;bottom:0;width:var(--rail);z-index:50;background:#070707;border-right:1px solid #222;
+display:flex;flex-direction:column;align-items:center;padding:23px 12px}
+.logo{font-family:"Playfair Display",serif;font-size:28px;line-height:1;margin-bottom:34px}
+.logo b{font-weight:500}.logo i{font-style:normal}
+.railnav{width:100%;display:grid;gap:4px}
+.railnav a{height:42px;border:1px solid transparent;border-radius:9px;display:flex;align-items:center;gap:9px;padding:0 10px;color:#9e9ba2;font-size:10px;transition:.25s}
+.railnav a svg{width:15px;height:15px;stroke:currentColor;stroke-width:1.7}
+.railnav a:hover,.railnav a.active{color:#fff;background:#101012;border-color:#29292d}
+.railnav a.active:before{content:"";position:absolute;left:0;width:2px;height:24px;background:#fff;border-radius:0 2px 2px 0}
+.rail-bottom{margin-top:auto;width:100%;display:grid;gap:12px}
+.rail-bottom a{display:flex;justify-content:center;color:#aaa7ae}
+.rail-bottom svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.6}
+.rail-resume{border:1px solid #3b3b40;border-radius:8px;padding:9px 5px!important;gap:6px!important;font-size:9px!important}
+.rail-copy{font-size:8px;color:#68666c;text-align:center;line-height:1.5}
 
-/* COMMON */
-section{padding:105px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
-.section-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.17em;color:#e46e7d;font-weight:700;margin-bottom:8px}
-.section-head h2{font:700 clamp(2.5rem,5vw,4.2rem)/.95 "Space Grotesk",sans-serif;letter-spacing:-.055em}
-.section-head p{max-width:460px;color:var(--muted)}
-.red-line{display:inline-block;width:42px;height:2px;background:var(--red2);vertical-align:middle;margin-left:12px}
-.btn{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:12px 17px;border-radius:12px;border:1px solid #422a2e;
-  background:#130d0f;font-weight:700;font-size:.88rem;transition:.25s
-}
-.btn:hover{transform:translateY(-3px);border-color:var(--red2);box-shadow:0 12px 35px rgba(197,31,53,.18)}
-.btn.primary{background:var(--red);border-color:var(--red);box-shadow:0 14px 40px rgba(197,31,53,.25)}
-.btn.primary:hover{background:var(--red2)}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
-.reveal.show{opacity:1;transform:none}
+/* LAYOUT */
+main{margin-left:var(--rail);max-width:1500px}
+.section{padding:58px 52px}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;border-bottom:1px solid #1e1e21}
+.hello{font-size:12px;color:#aaa6ae;margin-bottom:8px}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(60px,7vw,106px);font-weight:500;line-height:.87;letter-spacing:-.055em;margin:0 0 24px}
+.hero h1 em{font-style:italic}
+.roles{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#b7b3bb;display:flex;flex-wrap:wrap;gap:7px;margin-bottom:21px}
+.roles span:not(:last-child):after{content:"•";margin-left:7px;color:#66636a}
+.lead{font-size:14px;color:#aaa7ae;max-width:520px;margin:0 0 24px}
+.hero-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.btn{height:39px;padding:0 13px;border:1px solid #333338;background:#0c0c0e;border-radius:8px;color:#ddd9df;font-size:10px;display:inline-flex;align-items:center;gap:8px;transition:.22s}
+.btn:hover{border-color:#888;color:#fff;transform:translateY(-2px)}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7}
+.hero-art{height:430px;position:relative;display:grid;place-items:center}
+.orbit{width:315px;height:315px;border:1px solid #39363c;border-radius:50%;position:relative}
+.orbit:before{content:"";position:absolute;inset:15px;border:1px solid #232126;border-radius:50%}
+.orbit:after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;top:15%;right:13%;box-shadow:0 0 18px #fff}
+.art-copy{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-family:"Playfair Display",serif;font-size:21px;line-height:1.05;font-style:italic;color:#ddd9df}
+.art-copy span{display:block;font-size:10px;font-family:"DM Sans",sans-serif;font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:#87838b;margin-top:12px}
+.spark{position:absolute;width:8px;height:8px;border:1px solid #aaa;transform:rotate(45deg)}
+.spark.a{top:17%;left:20%}.spark.b{top:25%;right:11%}.spark.c{bottom:20%;left:17%}.spark.d{bottom:14%;right:23%}
 
-/* HERO */
-.hero{min-height:100vh;display:grid;align-items:center;padding:145px 0 75px}
-.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:65px;align-items:center}
-.kicker{display:flex;align-items:center;gap:9px;color:#ee909c;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700}
-.kicker:before{content:"";width:27px;height:1px;background:var(--red2)}
-.hero h1{font:700 clamp(3.7rem,7.5vw,7.1rem)/.88 "Space Grotesk",sans-serif;letter-spacing:-.07em;margin:20px 0 25px}
-.hero h1 .red{color:var(--red2)}
-.hero-copy{font-size:1.08rem;color:#bbb1b3;max-width:650px}
-.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:29px}
-.socials{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:#bcb2b4;font-size:.88rem}
-.socials a:hover{color:#fff}
-.profile{
-  min-height:480px;position:relative;overflow:hidden;border:1px solid #422a2e;
-  border-radius:32px;background:linear-gradient(145deg,#1a0f12,#0d090a);
-  box-shadow:0 30px 90px rgba(0,0,0,.65)
-}
-.profile:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;right:-80px;top:-80px;background:rgba(239,51,76,.2);filter:blur(65px)}
-.profile-ring{position:absolute;width:78%;aspect-ratio:1;border:1px solid #e43a4e;border-radius:50%;left:11%;top:8%;box-shadow:0 0 45px rgba(239,51,76,.13)}
-.profile-placeholder{position:absolute;inset:12%;display:grid;place-items:center;font:700 8rem "Space Grotesk";color:#2b1117;letter-spacing:-.1em}
-.profile-photo{position:absolute;inset:9%;width:82%;height:82%;object-fit:cover;border-radius:50%;display:none}
-.profile-note{position:absolute;bottom:20px;left:20px;right:20px;padding:15px 17px;border:1px solid #39272a;border-radius:16px;background:rgba(10,7,8,.82);backdrop-filter:blur(12px)}
-.profile-note small{color:#827679;text-transform:uppercase;letter-spacing:.12em}
-.profile-note strong{display:block;font:600 1.15rem "Space Grotesk";margin-top:3px}
-.profile-note span{color:#9f9496;font-size:.83rem}
+/* HEADERS */
+.head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid #242428;padding-bottom:12px;margin-bottom:18px}
+.head h2{font-family:"Playfair Display",serif;font-weight:500;font-size:24px;margin:0}
+.head h2:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#fff;margin:0 10px 4px 0}
+.head a{font-size:10px;color:#bbb7bf;display:flex;gap:6px;align-items:center}
+.head a svg{width:14px;height:14px;stroke:currentColor}
 
-/* STATS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:22px;background:rgba(15,10,12,.72);overflow:hidden}
-.stat{padding:25px;text-align:center;border-right:1px solid var(--line)}
-.stat:last-child{border-right:0}
-.stat b{display:block;color:var(--red2);font:700 1.65rem "Space Grotesk"}
-.stat span{display:block;color:#aaa0a2;font-size:.82rem;margin-top:3px}
+/* PROJECT CHAIN */
+.chain-wrap{position:relative;overflow:hidden;padding:15px 0 8px}
+.chain-track{display:flex;gap:10px;align-items:stretch;will-change:transform;transition:transform .48s cubic-bezier(.2,.75,.2,1);touch-action:pan-y}
+.pcard{flex:0 0 25%;min-width:0;background:#0b0b0d;border:1px solid #2a292e;border-radius:13px;overflow:hidden;opacity:.78;transform:scale(.94);transition:.45s;user-select:none}
+.pcard.is-center{opacity:1;transform:scale(1);border-color:#77737a;box-shadow:0 0 0 1px #222}
+.pimage{height:200px;background:#101013;overflow:hidden}
+.pimage img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}
+.pcard:hover .pimage img{transform:scale(1.025)}
+.pbody{padding:13px 14px 15px}
+.pnum{font-size:9px;color:#a7a3aa;letter-spacing:.13em}
+.pbody h3{font-family:"Playfair Display",serif;font-size:19px;font-weight:500;line-height:1.1;margin:4px 0 5px}
+.ptype{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#8f8c93}
+.pbody p{font-size:14px;color:#98959c;min-height:50px;margin:9px 0 11px}
+.pactions{display:flex;gap:5px;flex-wrap:wrap}
+.mini{height:29px;padding:0 8px;border:1px solid #303036;border-radius:7px;background:#0d0d0f;color:#d5d1d8;font-size:9px;display:inline-flex;align-items:center;gap:5px}
+.mini:hover{border-color:#777;color:#fff}
+.mini svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.7}
+.chain-arrow{position:absolute;top:48%;z-index:3;width:36px;height:36px;border:1px solid #49474d;background:#09090a;color:#fff;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:.2s}
+.chain-arrow:hover{background:#171719}
+.chain-arrow svg{width:17px;height:17px;stroke:currentColor}
+.chain-arrow.left{left:2px}.chain-arrow.right{right:2px}
+.chain-dots{display:flex;justify-content:center;gap:6px;margin-top:14px}
+.chain-dot{width:6px;height:6px;background:#4a484e;border-radius:50%;cursor:pointer}
+.chain-dot.active{background:#fff}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-.card{border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,#130d0f,#0d090a);padding:29px}
-.card h3{font:600 1.3rem "Space Grotesk";margin-bottom:12px}
-.card p{color:#aaa0a2}
-.education-row{display:grid;grid-template-columns:45px 1fr;gap:14px;padding:10px 0}
-.icon{width:42px;height:42px;border:1px solid #54232b;border-radius:13px;display:grid;place-items:center;color:var(--red2);background:#1c0d11}
-.education-row strong{display:block}
-.education-row small{color:#928789}
+/* PANELS */
+.panel{background:#0b0b0d;border:1px solid #29282d;border-radius:15px;padding:15px}
+.two{display:grid;grid-template-columns:1.08fr .92fr;gap:10px}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.cap{background:#0d0d0f;border:1px solid #242328;border-radius:10px;padding:13px}
+.cap-icon{width:21px;height:21px;margin-bottom:7px;color:#ddd}
+.cap-icon svg{width:100%;height:100%;stroke:currentColor;fill:none;stroke-width:1.5}
+.cap h3{font-size:11px;margin:0 0 6px}
+.cap ul{padding:0;margin:0;list-style:none;color:#89868e;font-size:9px;line-height:1.75}
+.cap li:before{content:"·";margin-right:5px;color:#c7c3c9}
+.exp-edu{display:grid;gap:22px}
+.subhead{font-family:"Playfair Display",serif;font-size:20px;font-weight:500;margin:0 0 12px}
+.timeline{border-left:1px solid #3b3940;padding-left:15px;position:relative}
+.timeline:before{content:"";position:absolute;left:-4px;top:7px;width:7px;height:7px;border-radius:50%;background:#fff}
+.date{font-size:9px;color:#aaa6ae}
+.timeline h3{font-family:"Playfair Display",serif;font-size:18px;font-weight:500;margin:3px 0}
+.timeline p{font-size:13px;color:#8f8c93;margin:2px 0}
+.edu{border-top:1px solid #29282d;padding-top:18px}
+.edu-icon{width:39px;height:39px;border:1px solid #49464d;border-radius:50%;display:grid;place-items:center;float:left;margin:0 11px 8px 0}
+.edu-icon svg{width:19px;height:19px;stroke:#ddd;fill:none;stroke-width:1.5}
+.edu h3{font-family:"Playfair Display",serif;font-size:16px;font-weight:500;margin:0 0 4px}
+.edu p{font-size:13px;color:#8f8c93;margin:0}
+.clear{clear:both}
 
-/* SKILLS */
-.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
-.skill-card{
-  min-height:205px;border:1px solid var(--line);border-radius:21px;
-  padding:22px;background:linear-gradient(145deg,#150e10,#0d090a);
-  position:relative;overflow:hidden;transition:.3s
-}
-.skill-card:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;right:-45px;bottom:-50px;background:rgba(197,31,53,.19);filter:blur(18px)}
-.skill-card:hover{transform:translateY(-7px);border-color:#6f2b35;box-shadow:0 18px 50px rgba(0,0,0,.35)}
-.skill-no{color:#786c6e;font-size:.68rem;letter-spacing:.12em}
-.skill-card h3{font:600 1.18rem "Space Grotesk";margin:18px 0 12px}
-.skill-list{display:flex;gap:7px;flex-wrap:wrap}
-.skill-pill{border:1px solid #35282b;background:#171012;border-radius:8px;padding:5px 8px;color:#bcb1b3;font-size:.74rem}
-
-/* PROJECTS */
-.project-section{overflow:hidden}
-.swiper{overflow:visible;padding:10px 0 60px}
-.swiper-slide{
-  width:min(465px,83vw);height:570px;border:1px solid #35272a;border-radius:27px;
-  overflow:hidden;background:#100b0d;transition:.35s
-}
-.swiper-slide-active{border-color:#7a2b37;box-shadow:0 25px 80px rgba(0,0,0,.65)}
-.project-img{width:100%;height:265px;display:block;object-fit:cover;background:#171011}
-.project-fallback{
-  height:265px;display:grid;place-items:center;background:
-  radial-gradient(circle at 65% 30%,rgba(239,51,76,.32),transparent 25%),
-  linear-gradient(135deg,#211015,#0d090a);
-  font:700 3.4rem "Space Grotesk";letter-spacing:-.08em
-}
-.project-body{padding:23px 24px}
-.project-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.project-type{font-size:.68rem;color:#e06a78;text-transform:uppercase;letter-spacing:.14em;font-weight:700}
-.project-status{font-size:.68rem;color:#aaa0a2;border:1px solid #38272a;border-radius:999px;padding:4px 8px}
-.project-body h3{font:600 1.55rem "Space Grotesk";margin:11px 0 8px}
-.project-body p{color:#a69b9d;font-size:.9rem;min-height:72px}
-.project-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
-.project-tag{font-size:.68rem;border:1px solid #34272a;border-radius:999px;padding:4px 8px;color:#aaa0a2}
-.project-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.project-btn{font-size:.77rem;font-weight:700;border:1px solid #432b30;border-radius:9px;padding:8px 10px;background:#160e10}
-.project-btn:hover{border-color:var(--red2);color:#fff}
-.swiper-button-next,.swiper-button-prev{color:#fff;background:#171113;border:1px solid #3b292c;width:40px;height:40px;border-radius:50%}
-.swiper-button-next:after,.swiper-button-prev:after{font-size:13px}
-.swiper-pagination-bullet{background:#6b5e60}
-.swiper-pagination-bullet-active{background:var(--red2)}
-
-/* EXPERIENCE */
-.experience{display:grid;gap:0}
-.experience-item{display:grid;grid-template-columns:185px 1fr;gap:35px;border-top:1px solid var(--line);padding:28px 0}
-.experience-item:last-child{border-bottom:1px solid var(--line)}
-.experience-date{color:#df6b78;font-size:.72rem;font-weight:700;letter-spacing:.08em}
-.experience-item h3{font:600 1.45rem "Space Grotesk";margin-bottom:7px}
-.experience-item p,.experience-item li{color:#a79c9e}
-.experience-item ul{padding-left:18px}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-.chip{border:1px solid #37272a;border-radius:999px;padding:5px 9px;color:#a99ea0;font-size:.7rem}
+/* CERTS */
+.cert-chain{display:flex;gap:8px;overflow:hidden}
+.cert{flex:0 0 15.2%;min-width:145px;background:#0b0b0d;border:1px solid #29282d;border-radius:10px;padding:8px;transition:.25s}
+.cert:hover{transform:translateY(-3px);border-color:#555259}
+.cert-img{height:88px;background:#151518;border-radius:7px;overflow:hidden;margin-bottom:8px;display:grid;place-items:center}
+.cert-img img{width:100%;height:100%;object-fit:cover}
+.cert-name{font-size:9px;line-height:1.3;margin-bottom:3px}
+.cert-org{font-size:8px;color:#88858d}.cert-date{font-size:8px;color:#77747b;margin-top:2px}
 
 /* ACHIEVEMENTS */
-.achievement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
-.achievement{border:1px solid var(--line);border-radius:20px;background:#100b0d;padding:23px;transition:.25s}
-.achievement:hover{transform:translateY(-5px);border-color:#612832}
-.achievement h3{font:600 1.12rem "Space Grotesk";margin-bottom:5px}
-.achievement p{color:#9e9395;font-size:.87rem}
+.ach-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.ach{background:#0b0b0d;border:1px solid #29282d;border-radius:10px;padding:18px 10px;text-align:center}
+.ach-icon{width:24px;height:24px;margin:0 auto 9px}.ach-icon svg{width:100%;height:100%;stroke:#ddd;fill:none;stroke-width:1.45}
+.ach strong{font-size:9px;display:block}.ach span{font-size:8px;color:#838087;display:block;margin-top:4px}
 
 /* CONTACT */
-.contact-card{
-  position:relative;overflow:hidden;border:1px solid #5b252f;border-radius:30px;
-  padding:52px;background:radial-gradient(circle at 90% 5%,#661525,transparent 31%),#120b0e
-}
-.contact-card h2{font:700 clamp(2.8rem,6vw,5.2rem)/.92 "Space Grotesk";letter-spacing:-.06em;max-width:780px}
-.contact-card p{color:#b4a9ab;max-width:610px;margin:20px 0 27px}
-.contact-links{display:flex;flex-wrap:wrap;gap:10px}
-.contact-link{border:1px solid #512932;background:#180d10;border-radius:12px;padding:11px 15px;font-weight:700;font-size:.84rem}
-.contact-link:hover{border-color:var(--red2);transform:translateY(-2px)}
+.contact{margin-top:5px;background:#0c0c0f;border:1px solid #37353b;border-radius:15px;padding:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.contact small{font-size:9px;letter-spacing:.13em;color:#8f8b93}
+.contact h2{font-family:"Playfair Display",serif;font-size:40px;font-weight:500;line-height:1.02;margin:7px 0 10px;max-width:600px}
+.contact h2 em{font-style:italic}
+.contact p{font-size:10px;color:#89868e;margin:0}
+.contact-links{display:grid;align-content:center;gap:10px}
+.contact-link{display:flex;align-items:center;gap:9px;color:#c5c1c8;font-size:10px}
+.contact-link svg{width:16px;height:16px;stroke:#ddd;fill:none;stroke-width:1.6;flex:none}
+.footer{padding:17px 52px 23px;color:#626067;font-size:8px;display:flex;justify-content:space-between}
 
-footer{border-top:1px solid var(--line);padding:28px 0;color:#6f6567;font-size:.8rem;display:flex;justify-content:space-between;gap:20px}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(15px);transition:.6s}.reveal.show{opacity:1;transform:none}
 
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:35px}
-  .profile{min-height:390px}
-  .skills-grid{grid-template-columns:repeat(2,1fr)}
-  .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+@media(max-width:1100px){
+  .section{padding:52px 32px}.hero{grid-template-columns:1fr .75fr}
+  .pcard{flex-basis:33.333%}.cert{flex-basis:21%}.ach-grid{grid-template-columns:repeat(3,1fr)}
 }
-@media(max-width:720px){
-  nav ul{display:none}
-  .menu{display:block}
-  .resume-nav{display:none}
-  nav.mobile-open ul{
-    display:flex;position:absolute;left:0;right:0;top:58px;flex-direction:column;
-    background:#0c090a;border:1px solid #332427;border-radius:15px;padding:15px
+@media(max-width:780px){
+  :root{--rail:0px}
+  .rail{top:auto;bottom:0;right:0;width:100%;height:62px;padding:6px 8px;border-right:0;border-top:1px solid #242428;flex-direction:row}
+  .logo,.rail-bottom{display:none}.railnav{display:flex;justify-content:space-around;gap:1px}
+  .railnav a{height:50px;padding:4px 5px;flex-direction:column;justify-content:center;gap:3px;font-size:7px}
+  .railnav a.active:before{display:none}
+  main{margin:0;padding-bottom:62px}.section{padding:45px 18px}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:65px}.hero-art{height:300px;order:-1}.orbit{width:235px;height:235px}
+  .hero h1{font-size:57px}.hero-actions .btn{flex:1;justify-content:center}
+  .pcard{flex-basis:78vw}.pimage{height:190px}.chain-arrow.left{left:0}.chain-arrow.right{right:0}
+  .two{grid-template-columns:1fr}.cap-grid{grid-template-columns:repeat(2,1fr)}
+  .cert{flex-basis:43vw}.ach-grid{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}.contact h2{font-size:34px}
+  .footer{padding:14px 18px;flex-direction:column;gap:5px}
+}
+@media(max-width:440px){
+  .hero h1{font-size:48px}.roles{font-size:8px}.cap-grid{grid-template-columns:1fr}
+  .ach-grid{grid-template-columns:1fr}.hero-actions .btn{flex:unset;width:100%}
+}
+</style>
+<style>
+/* --- Project swipe chain --- */
+.projects-carousel,
+.project-carousel,
+.projects-track-wrap {
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.projects-carousel.is-dragging,
+.project-carousel.is-dragging,
+.projects-track-wrap.is-dragging {
+  cursor: grabbing;
+}
+.projects-track,
+.project-track,
+.projects-grid {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+  user-select: none;
+}
+.projects-track > *,
+.project-track > *,
+.projects-grid > * {
+  flex: 0 0 clamp(280px, 72vw, 620px);
+}
+@media (max-width: 700px) {
+  .projects-track > *,
+  .project-track > *,
+  .projects-grid > * {
+    flex-basis: min(84vw, 420px);
   }
-  .about-grid,.achievement-grid{grid-template-columns:1fr}
-  .section-head{display:block}.section-head p{margin-top:12px}
-  .experience-item{grid-template-columns:1fr;gap:8px}
 }
-@media(max-width:520px){
-  section{padding:85px 0}
-  .hero{padding-top:125px}
-  .hero h1{font-size:clamp(3.3rem,17vw,5.2rem)}
-  .profile{min-height:320px}
-  .profile-placeholder{font-size:6rem}
-  .skills-grid{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
-  .stat{padding:18px 10px}
-  .swiper-slide{height:590px}
-  .project-img,.project-fallback{height:250px}
-  footer{display:block}footer div+div{margin-top:6px}
+</style>
+<style>
+/* Readability pass — content text is intentionally comfortable to read */
+.lead{font-size:16px !important;line-height:1.7}
+.panel > p{font-size:16px !important;line-height:1.7}
+.timeline p,.edu p{font-size:13px !important;line-height:1.55}
+.pbody p{font-size:13px !important;line-height:1.55}
+.cap ul{font-size:12px !important;line-height:1.8}
+.cert-name,.cert-org,.cert-date{font-size:12px}
+.contact p{font-size:13px !important}
+.contact-link{font-size:13px !important}
+@media(max-width:780px){
+  .lead{font-size:15px !important}
+  .panel > p{font-size:15px !important}
+  .pbody p{font-size:13px !important}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="noise"></div>
 
-<nav id="nav">
-  <div class="nav-inner">
-    <a class="logo" href="#home">Sreehitha<span>.</span></a>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="resume-nav" href="Sreehitha_Madiraju_Resume.pdf" download>Resume ↓</a>
-    <button class="menu" aria-label="Open menu">☰</button>
+<!-- SVG ICON SPRITE -->
+<svg width="0" height="0" style="position:absolute">
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5M9 21v-6h6v6"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="3.5"/><path d="M5 21c.8-4 3.1-6 7-6s6.2 2 7 6"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5h8v2M3 12h18M10 12v2h4v-2"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.2 8.2-8 10-4.8-1.8-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+<symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10v6M8 7.5v.01M12 16v-6M12 13c0-2 1-3 3-3s3 1.2 3 3v3"/></symbol>
+<symbol id="i-github" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-2.8 17.6c.45.08.62-.2.62-.43v-1.65c-2.52.55-3.05-1.08-3.05-1.08-.41-1.04-1-1.32-1-1.32-.82-.56.06-.55.06-.55.91.06 1.39.94 1.39.94.81 1.38 2.13.98 2.65.75.08-.59.32-.98.58-1.2-2.01-.23-4.13-1.01-4.13-4.5 0-.99.35-1.8.93-2.44-.09-.23-.4-1.16.09-2.42 0 0 .76-.24 2.49.93a8.7 8.7 0 0 1 4.54 0c1.73-1.17 2.49-.93 2.49-.93.49 1.26.18 2.19.09 2.42.58.64.93 1.45.93 2.44 0 3.5-2.12 4.27-4.14 4.5.33.29.62.85.62 1.72v2.36c0 .23.17.51.63.43A9 9 0 0 0 12 3Z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11M8 10l4 4 4-4M5 20h14"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8"/><path d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></symbol>
+<symbol id="i-figma" viewBox="0 0 24 24"><path d="M9 3h3v6H9a3 3 0 1 1 0-6ZM12 3h3a3 3 0 1 1 0 6h-3V3ZM9 9h3v6H9a3 3 0 1 1 0-6ZM12 9h3a3 3 0 1 1 0 0 6h-3V9ZM12 15a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 5a3 3 0 0 0-5 2 3 3 0 0 0 1 5 3 3 0 0 0 2 5 3 3 0 0 0 5 2V6a3 3 0 0 0-3-1ZM15 5a3 3 0 0 1 5 2 3 3 0 0 1-1 5 3 3 0 0 1-2 5 3 3 0 0 1-5 2V6a3 3 0 0 1 3-1Z"/><path d="M6 8h3M15 8h3M6 14h3M15 14h3"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-7"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24"><path d="m4 20 4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20Z"/><path d="m13.5 7.5 3 3"/></symbol>
+<symbol id="i-tools" viewBox="0 0 24 24"><path d="M14 6a4 4 0 0 0-5 5L4 16l4 4 5-5a4 4 0 0 0 5-5l-3 3-4-4 3-3Z"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4ZM5 5H3v2a4 4 0 0 0 5 4M19 5h2v2a4 4 0 0 1-5 4M12 13v4M8 21h8M9 17h6"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c.5-4 2.5-6 6-6s5.5 2 6 6M15 15c3 0 5 1.7 5.5 5"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+<symbol id="i-graduation" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 11v5c3 3 7 3 10 0v-5M21 10v6"/></symbol>
+</svg>
+
+<aside class="rail">
+  <div class="logo"><b>SM</b><i>.</i></div>
+  <nav class="railnav">
+    <a class="active" href="#home"><svg><use href="#i-home"/></svg>Home</a>
+    <a href="#about"><svg><use href="#i-user"/></svg>About</a>
+    <a href="#skills"><svg><use href="#i-layers"/></svg>Skills</a>
+    <a href="#projects"><svg><use href="#i-grid"/></svg>Projects</a>
+    <a href="#experience"><svg><use href="#i-briefcase"/></svg>Experience</a>
+    
+    <a href="#achievements"><svg><use href="#i-star"/></svg>Achievements</a>
+    <a href="#contact"><svg><use href="#i-mail"/></svg>Contact</a>
+  </nav>
+  <div class="rail-bottom">
+    <a href="https://www.linkedin.com/in/sreehitha-madiraju" target="_blank" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+    <a href="https://github.com/SreehithaMadiraju" target="_blank" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+    <a href="mailto:masreehi41@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+    <a class="rail-resume" href="./Sreehitha_Madiraju_Resume.pdf" download><svg><use href="#i-download"/></svg>Resume</a>
+    <div class="rail-copy">© 2025<br>Sreehitha Madiraju.</div>
   </div>
-</nav>
+</aside>
 
-<main id="home">
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="reveal">
-      <div class="kicker">AI/ML × Product × UX</div>
-      <h1>Hi, I'm<br><span class="red">Sreehitha</span><br>Madiraju.</h1>
-      <p class="hero-copy">Computer Science (AI & ML) undergraduate with hands-on experience turning data into insights and product opportunities. I build dashboards, analytics tools, AI-powered applications, and user-focused digital experiences.</p>
-      <div class="actions">
-        <a class="btn primary" href="Sreehitha_Madiraju_Resume.pdf" download>Download Resume ↓</a>
-        <a class="btn" href="#work">Explore My Work →</a>
-      </div>
-      <div class="socials">
-        <a href="mailto:masreehi41@gmail.com">✉ Email Me</a>
-        <a href="https://www.linkedin.com/in/sreehitha-madiraju" target="_blank" rel="noopener">in Contact me on LinkedIn</a>
-        <a href="https://github.com/sreehithamadiraju" target="_blank" rel="noopener">◉ GitHub</a>
-      </div>
+<main>
+<section id="home" class="section hero reveal">
+  <div>
+    <div class="hello">Hello, I'm</div>
+    <h1>Sreehitha<br><em>Madiraju</em></h1>
+    <div class="roles"><span>AI/ML Enthusiast</span><span>Product Thinker</span><span>UI/UX Designer</span><span>Problem Solver</span></div>
+    <p class="lead">I build intelligent, user-centered solutions that turn data into meaningful insights and impactful products.</p>
+    <div class="hero-actions">
+      <a class="btn" href="https://www.linkedin.com/in/sreehitha-madiraju" target="_blank"><svg><use href="#i-linkedin"/></svg>LinkedIn</a>
+      <a class="btn" href="https://github.com/SreehithaMadiraju" target="_blank"><svg><use href="#i-github"/></svg>GitHub</a>
+      <a class="btn" href="mailto:masreehi41@gmail.com"><svg><use href="#i-mail"/></svg>Email Me</a>
+      <a class="btn" href="./Sreehitha_Madiraju_Resume.pdf" download><svg><use href="#i-download"/></svg>Download Resume</a>
     </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="orbit"><div class="art-copy">Let's build<br>something<br>great together!<span>AI × Product × Design</span></div></div>
+    <i class="spark a"></i><i class="spark b"></i><i class="spark c"></i><i class="spark d"></i>
+  </div>
+</section>
 
-    <div class="profile reveal">
-      <div class="profile-ring"></div>
-      <!-- Add your real photo as profile-photo.jpg when you have it. -->
-      <img class="profile-photo" src="profile-photo.jpg" alt="Sreehitha Madiraju">
-      <div class="profile-placeholder">SM</div>
-      <div class="profile-note">
-        <small>Currently building</small>
-        <strong>AI-powered products + thoughtful UX</strong>
-        <span>Hyderabad, Telangana · 2023–2027</span>
-      </div>
+<section id="about" class="section reveal">
+  <div class="head"><h2>About</h2><span>More than a title.</span></div>
+  <div class="panel"><p style="max-width:850px;color:#aaa7ae;font-size:16px;margin:0">Computer Science (AI/ML) student with hands-on experience building AI-powered applications, data-driven solutions, dashboards, and user-focused products. I enjoy working across technical problem solving, product thinking, and UI/UX — turning ideas into useful, understandable experiences.</p></div>
+</section>
+
+<section id="projects" class="section reveal">
+  <div class="head"><h2>Selected Work</h2><a href="https://github.com/SreehithaMadiraju" target="_blank">View all projects <svg><use href="#i-arrow"/></svg></a></div>
+  <div class="chain-wrap" id="chain">
+    <button class="chain-arrow left" id="prev" aria-label="Previous project"><svg><use href="#i-arrow-left"/></svg></button>
+    <div class="chain-track" id="track">
+      <article class="pcard">
+        <div class="pimage"><img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bf8e69214319399.6756bd7da321e.jpg" alt="NeuroVision AI"></div>
+        <div class="pbody"><div class="pnum">01</div><h3>NeuroVision AI</h3><div class="ptype">AI / Medical Imaging</div><p>AI-powered medical imaging application for brain tumor and Alzheimer’s analysis.</p><div class="pactions"><a class="mini" href="https://github.com/SreehithaMadiraju/neurovision-ai" target="_blank"><svg><use href="#i-github"/></svg>GitHub</a></div></div>
+      </article>
+      <article class="pcard">
+        <div class="pimage"><img src="https://static.vecteezy.com/system/resources/previews/001/938/014/non_2x/resumes-in-ats-applicant-tracking-system-process-vector.jpg" alt="SPrep"></div>
+        <div class="pbody"><div class="pnum">02</div><h3>SPrep</h3><div class="ptype">Product / AI</div><p>Student learning platform with mock tests, smart planners, and an AI-assisted chatbot.</p><div class="pactions"><a class="mini" href="https://sreehithamadiraju.github.io/Sprep/signin.html" target="_blank"><svg><use href="#i-external"/></svg>Live Project</a><a class="mini" href="https://www.figma.com/design/hd2akFaiRNRPrWCa3X2KeV/Sprep" target="_blank"><svg><use href="#i-figma"/></svg>Figma</a></div></div>
+      </article>
+      <article class="pcard">
+        <div class="pimage"><img src="./flipd.jpg" alt="Flipd UI/UX Design"></div>
+        <div class="pbody"><div class="pnum">03</div><h3>Flipd</h3><div class="ptype">UI/UX Design</div><p>Responsive book-discovery concept designed around intuitive navigation and a focused reading experience.</p><div class="pactions"><a class="mini" href="https://www.figma.com/design/dis3JaYNTFuUjBESwsgfwo/FLIPD" target="_blank"><svg><use href="#i-figma"/></svg>Figma</a><a class="mini" href="https://drive.google.com/drive/folders/1qH8Q-3LY5RnMfuBA-yvCg1j0pQy7GFKJ" target="_blank"><svg><use href="#i-external"/></svg>Case Study</a></div></div>
+      </article>
+      <article class="pcard">
+        <div class="pimage"><img src="https://static.vecteezy.com/system/resources/previews/001/938/014/non_2x/resumes-in-ats-applicant-tracking-system-process-vector.jpg" alt="ACS Resume Score Tracker"></div>
+        <div class="pbody"><div class="pnum">04</div><h3>ACS Resume Score Tracker</h3><div class="ptype">AI / Data Analytics</div><p>AI-assisted resume screening tool that analyzes profiles and scores candidates using NLP models.</p><div class="pactions"><a class="mini" href="https://acs-tracker-q9ac3vwzs9xkwtrecwx5c3.streamlit.app/" target="_blank"><svg><use href="#i-external"/></svg>Live Project</a></div></div>
+      </article>
+      <article class="pcard">
+        <div class="pimage"><img src="https://media.istockphoto.com/id/1455958730/vector/data-monitoring-and-analysis-on-desktop-tiny-people-with-magnifying-glass-research-graph.jpg?s=612x612&w=0&k=20&c=aL-XEnEBILCzi-qX_7tUn84FH7Ei_YoJTxlcGCY0Vb8=" alt="Interns Tracker"></div>
+        <div class="pbody"><div class="pnum">05</div><h3>Interns Tracker</h3><div class="ptype">Productivity / Dashboard</div><p>Intern management dashboard for attendance, tasks, performance tracking, and structured reporting.</p><div class="pactions"><a class="mini" href="https://internstracker.streamlit.app/" target="_blank"><svg><use href="#i-external"/></svg>Live Project</a></div></div>
+      </article>
+    </div>
+    <button class="chain-arrow right" id="next" aria-label="Next project"><svg><use href="#i-arrow"/></svg></button>
+  </div>
+  <div class="chain-dots" id="dots"></div>
+</section>
+
+<section id="skills" class="section reveal">
+  <div class="head"><h2>My Capabilities</h2><span>What I can work across.</span></div>
+  <div class="two">
+    <div class="panel"><div class="cap-grid">
+      <div class="cap"><div class="cap-icon"><svg><use href="#i-brain"/></svg></div><h3>AI / ML & GenAI</h3><ul><li>LLMs & Fine-tuning</li><li>Prompt Engineering</li><li>RAGs</li><li>NLP Models</li><li>Hugging Face</li></ul></div>
+      <div class="cap"><div class="cap-icon"><svg><use href="#i-chart"/></svg></div><h3>Data & Analytics</h3><ul><li>SQL</li><li>Power BI</li><li>Data Analysis</li><li>Dashboards</li><li>Visualization</li></ul></div>
+      <div class="cap"><div class="cap-icon"><svg><use href="#i-pen"/></svg></div><h3>UI / UX Design</h3><ul><li>Figma</li><li>Wireframing</li><li>Prototyping</li><li>Typography</li><li>Usability</li></ul></div>
+      <div class="cap"><div class="cap-icon"><svg><use href="#i-code"/></svg></div><h3>Web Development</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>Streamlit</li></ul></div>
+      <div class="cap"><div class="cap-icon"><svg><use href="#i-tools"/></svg></div><h3>Tools & Platforms</h3><ul><li>Git & GitHub</li><li>VS Code</li><li>Canva</li><li>Streamlit</li><li>Power BI</li></ul></div>
+      <div class="cap"><div class="cap-icon"><svg><use href="#i-star"/></svg></div><h3>Core Strengths</h3><ul><li>Problem Solving</li><li>Product Thinking</li><li>Team Leadership</li><li>Communication</li><li>Adaptability</li></ul></div>
+    </div></div>
+    <div class="panel exp-edu" id="experience">
+      <div><h3 class="subhead">Experience</h3><div class="timeline"><div class="date">May 2025 — Jul 2025</div><h3>Tech Lead Intern</h3><p>Swecha Hyderabad</p><p>Built an intern management system using Python & Streamlit.</p><p>Tracked attendance, tasks & performance across teams.</p><p>Designed analytics dashboards for real-time insights.</p></div></div>
+      <div class="edu"><div class="edu-icon"><svg><use href="#i-graduation"/></svg></div><h3>B.Tech in Computer Science (AI & ML)</h3><p>Stanley College of Engineering and Technology for Women, Hyderabad</p><p style="margin-top:5px;color:#aaa">2023 — 2027 &nbsp;·&nbsp; CGPA 8.21</p><div class="clear"></div></div>
     </div>
   </div>
 </section>
 
-<section class="container reveal" aria-label="Quick facts">
-  <div class="stats">
-    <div class="stat"><b>4+</b><span>Selected Projects</span></div>
-    <div class="stat"><b>1</b><span>Industry Internship</span></div>
-    <div class="stat"><b>5+</b><span>Achievements & Activities</span></div>
-    <div class="stat"><b>8.23</b><span>Current CGPA</span></div>
+
+
+<section id="achievements" class="section reveal">
+  <div class="head"><h2>Achievements & Leadership</h2><span>More than just code.</span></div>
+  <div class="ach-grid">
+    <div class="ach"><div class="ach-icon"><svg><use href="#i-trophy"/></svg></div><strong>Finalist</strong><span>AI Hack Days Hackathon · Tech Mahindra</span></div>
+    <div class="ach"><div class="ach-icon"><svg><use href="#i-star"/></svg></div><strong>WINNOVX Hackfest 2026</strong><span>Event Organizer · Stanley College</span></div>
+    <div class="ach"><div class="ach-icon"><svg><use href="#i-users"/></svg></div><strong>Student Coordinator</strong><span>AI/ML Technical Club · Stanley College</span></div>
+    <div class="ach"><div class="ach-icon"><svg><use href="#i-star"/></svg></div><strong>Digital Head — Street Cause</strong><span>Hyderabad · Raised ₹8.3K for charity</span></div>
+    <div class="ach"><div class="ach-icon"><svg><use href="#i-calendar"/></svg></div><strong>Event Organizing Committee</strong><span>Coordinator · StanFest2k24</span></div>
   </div>
 </section>
 
-<section id="about">
-<div class="container">
-  <div class="section-head reveal">
-    <div><div class="section-label">01 <span class="red-line"></span></div><h2>About me.</h2></div>
-    <p>A little context behind the person building all these things.</p>
-  </div>
-  <div class="about-grid">
-    <article class="card reveal">
-      <h3>What I do</h3>
-      <p>I'm an AI/ML undergraduate who enjoys turning ideas into practical products. My work sits between data, AI, product thinking, and user experience — building tools that are useful, understandable, and focused on real problems.</p>
-      <br>
-      <p>Through internships, projects, design work, leadership roles, and hackathons, I've learned to think beyond just making something work: I care about how people use it and how the product supports a decision.</p>
-    </article>
-    <article class="card reveal">
-      <h3>Education</h3>
-      <div class="education-row">
-        <div class="icon">⌘</div>
-        <div><strong>B.E — Computer Science & Engineering (AI & ML)</strong><small>Stanley College of Engineering and Technology for Women, Hyderabad</small><small>CGPA: 8.23 · 2023–2027</small></div>
-      </div>
-    </article>
-  </div>
-</div>
-</section>
-
-<section id="skills">
-<div class="container">
-  <div class="section-head reveal">
-    <div><div class="section-label">02 <span class="red-line"></span></div><h2>My skills.</h2></div>
-    <p>Separated properly — because “skills” should not be one giant soup of technologies.</p>
-  </div>
-  <div class="skills-grid">
-    <article class="skill-card reveal"><span class="skill-no">01</span><h3>Professional Skills</h3><div class="skill-list"><span class="skill-pill">Product Thinking</span><span class="skill-pill">Stakeholder Communication</span><span class="skill-pill">Cross-Functional Collaboration</span><span class="skill-pill">Team Leadership</span><span class="skill-pill">Problem Solving</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">02</span><h3>Technical / Hard Skills</h3><div class="skill-list"><span class="skill-pill">Python</span><span class="skill-pill">SQL</span><span class="skill-pill">HTML</span><span class="skill-pill">CSS</span><span class="skill-pill">Streamlit</span><span class="skill-pill">Git</span><span class="skill-pill">GitHub</span><span class="skill-pill">VS Code</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">03</span><h3>AI & Automation</h3><div class="skill-list"><span class="skill-pill">Hugging Face</span><span class="skill-pill">LLMs</span><span class="skill-pill">Prompt Engineering</span><span class="skill-pill">RAGs</span><span class="skill-pill">AI-Powered Tooling</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">04</span><h3>UI / UX Design</h3><div class="skill-list"><span class="skill-pill">Figma</span><span class="skill-pill">Wireframing</span><span class="skill-pill">Prototyping</span><span class="skill-pill">Typography</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">05</span><h3>Data & Analytics</h3><div class="skill-list"><span class="skill-pill">Power BI</span><span class="skill-pill">Dashboard Design</span><span class="skill-pill">Data-Driven Reporting</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">06</span><h3>Design & Product Tools</h3><div class="skill-list"><span class="skill-pill">Figma</span><span class="skill-pill">Canva</span><span class="skill-pill">Product Planning</span><span class="skill-pill">Usability</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">07</span><h3>Web Technologies</h3><div class="skill-list"><span class="skill-pill">HTML</span><span class="skill-pill">CSS</span><span class="skill-pill">JavaScript</span></div></article>
-    <article class="skill-card reveal"><span class="skill-no">08</span><h3>Collaboration</h3><div class="skill-list"><span class="skill-pill">Leadership</span><span class="skill-pill">Communication</span><span class="skill-pill">Cross-Functional Work</span></div></article>
-  </div>
-</div>
-</section>
-
-<section id="work" class="project-section">
-<div class="container">
-  <div class="section-head reveal">
-    <div><div class="section-label">03 <span class="red-line"></span></div><h2>Selected projects.</h2></div>
-    <p>Swipe, drag, or use the arrows. Each card takes you directly to the work.</p>
-  </div>
-
-  <div class="swiper projectSwiper reveal">
-    <div class="swiper-wrapper">
-
-      <article class="swiper-slide">
-        <img class="project-img" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bf8e69214319399.6756bd7da321e.jpg" alt="NeuroVision AI project visual" loading="lazy">
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">AI / Computer Vision</span><span class="project-status">Live</span></div>
-          <h3>NeuroVision AI</h3>
-          <p>AI-powered medical imaging application focused on image classification workflows for brain-tumor and Alzheimer's analysis.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">AI/ML</span><span class="project-tag">Streamlit</span></div>
-          <div class="project-actions"><a class="project-btn" href="https://github.com/SreehithaMadiraJU/neurovision-ai" target="_blank" rel="noopener">GitHub ↗</a></div>
-        </div>
-      </article>
-
-      <article class="swiper-slide">
-        <img class="project-img" src="https://thumbs.dreamstime.com/z/student-studying-books-notes-educational-learning-concept-illustration-surrounded-study-materials-representing-326456763.jpg" alt="SPrep project visual" loading="lazy">
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">Product / UI/UX</span><span class="project-status">Live + Design</span></div>
-          <h3>SPrep</h3>
-          <p>Student learning platform with mock tests, smart planners, and an AI-powered chatbot for personalized learning.</p>
-          <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
-          <div class="project-actions"><a class="project-btn" href="https://sreehithamadiraju.github.io/Sprep/signin.html" target="_blank" rel="noopener">Live Project ↗</a><a class="project-btn" href="https://www.figma.com/design/hd2akFaiRNRPrWCa3X2KeV/Sprep?node-id=0-1&t=UD4Rpl2QpcudLIm4-1" target="_blank" rel="noopener">Design ↗</a></div>
-        </div>
-      </article>
-
-      <article class="swiper-slide">
-        <img class="project-img" src="https://static.vecteezy.com/system/resources/previews/001/938/014/non_2x/resumes-in-ats-applicant-tracking-system-process-vector.jpg" alt="ACS Resume Score Tracker project visual" loading="lazy">
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">AI / Data Product</span><span class="project-status">Live</span></div>
-          <h3>ACS Resume Score Tracker</h3>
-          <p>AI-assisted resume screening tool using Hugging Face Transformers to automate resume analysis and candidate scoring.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Streamlit</span><span class="project-tag">Hugging Face</span></div>
-          <div class="project-actions"><a class="project-btn" href="https://acs-tracker-q9ac3vwzs9xkwtrecwx5c3.streamlit.app/" target="_blank" rel="noopener">Live Project ↗</a></div>
-        </div>
-      </article>
-
-      <article class="swiper-slide">
-        <img class="project-img" src="https://media.istockphoto.com/id/1455958730/vector/data-monitoring-and-analysis-on-desktop-tiny-people-with-magnifying-glass-research-graph.jpg?s=612x612&w=0&k=20&c=aL-XEnEBILCzi-qX_7tUn84FH7Ei_YoJTxlcGCY0Vb8=" alt="Interns Tracker project visual" loading="lazy">
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">Analytics / Product</span><span class="project-status">Live</span></div>
-          <h3>Interns Tracker</h3>
-          <p>Centralized intern management dashboard for attendance and task progress, simplifying monitoring through structured reporting.</p>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Streamlit</span><span class="project-tag">Dashboard</span></div>
-          <div class="project-actions"><a class="project-btn" href="https://internstracker.streamlit.app/" target="_blank" rel="noopener">Live Project ↗</a></div>
-        </div>
-      </article>
-
-      <article class="swiper-slide">
-        <div class="project-fallback">FLIPD</div>
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">UI / UX Design</span><span class="project-status">Design + Case Study</span></div>
-          <h3>Flipd</h3>
-          <p>Responsive book discovery app prototype shaped through customer-centric research and usability principles.</p>
-          <div class="project-tags"><span class="project-tag">Figma</span><span class="project-tag">Wireframing</span><span class="project-tag">Prototyping</span></div>
-          <div class="project-actions"><a class="project-btn" href="https://www.figma.com/design/dis3JaYNTFuUjBESwsgfwo/FLIPD" target="_blank" rel="noopener">Design ↗</a><a class="project-btn" href="https://drive.google.com/drive/folders/1qH8Q-3LY5RnMfuBA-yvCg1j0pQy7GFKJ?usp=drive_link" target="_blank" rel="noopener">Case Study ↗</a></div>
-        </div>
-      </article>
-
-    </div>
-    <div class="swiper-button-prev"></div><div class="swiper-button-next"></div><div class="swiper-pagination"></div>
-  </div>
-</div>
-</section>
-
-<section id="experience">
-<div class="container">
-  <div class="section-head reveal">
-    <div><div class="section-label">04 <span class="red-line"></span></div><h2>Experience.</h2></div>
-    <p>Hands-on work where building and coordinating mattered just as much as the technology.</p>
-  </div>
-  <div class="experience">
-    <article class="experience-item reveal">
-      <div class="experience-date">MAY 2025 — JUL 2025</div>
-      <div><h3>Tech Lead Intern — Swecha Hyderabad</h3><ul><li>Built a Python and Streamlit-based intern management system for attendance, tasks, and performance.</li><li>Designed interactive dashboards to visualize intern data, enabling structured monitoring and faster decision-making.</li></ul><div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Dashboard Design</span><span class="chip">Data Reporting</span></div></div>
-    </article>
-  </div>
-</div>
-</section>
-
-<section id="achievements">
-<div class="container">
-  <div class="section-head reveal">
-    <div><div class="section-label">05 <span class="red-line"></span></div><h2>Achievements.</h2></div>
-    <p>The things outside the code editor that helped shape how I work.</p>
-  </div>
-  <div class="achievement-grid">
-    <article class="achievement reveal"><h3>Finalist — AI Hack Days</h3><p>Tech Mahindra</p></article>
-    <article class="achievement reveal"><h3>Core Organizing Committee Member</h3><p>WINNOVX Hackfest 2026</p></article>
-    <article class="achievement reveal"><h3>Student Coordinator</h3><p>AI/ML UDBHAV Technical Club</p></article>
-    <article class="achievement reveal"><h3>Digital Head</h3><p>Street Cause Hyderabad · Mar–Aug 2024 · Raised ₹8.3K for charity</p></article>
-    <article class="achievement reveal"><h3>Event Organizing Committee Coordinator</h3><p>StanFest2k24</p></article>
-  </div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-  <div class="contact-card reveal">
-    <div class="section-label">06 <span class="red-line"></span> CONTACT</div>
-    <h2>Let's build something worth talking about.</h2>
-    <p>I'm open to internships, product opportunities, UI/UX work, and projects where AI, data, and thoughtful design can come together.</p>
+<section id="contact" class="section reveal">
+  <div class="contact">
+    <div><small>HAVE A PROJECT IN MIND?</small><h2>Let's build something<br><em>worth remembering.</em></h2><p>Open to opportunities across AI/ML, data, product and UI/UX.</p></div>
     <div class="contact-links">
-      <a class="contact-link" href="mailto:masreehi41@gmail.com">✉ Email Me</a>
-      <a class="contact-link" href="https://www.linkedin.com/in/sreehitha-madiraju" target="_blank" rel="noopener">in Contact me on LinkedIn</a>
-      <a class="contact-link" href="https://github.com/sreehithamadiraju" target="_blank" rel="noopener">◉ GitHub</a>
-      <a class="contact-link" href="Sreehitha_Madiraju_Resume.pdf" download>↓ Download Resume</a>
+      <a class="contact-link" href="mailto:masreehi41@gmail.com"><svg><use href="#i-mail"/></svg>masreehi41@gmail.com</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/sreehitha-madiraju" target="_blank"><svg><use href="#i-linkedin"/></svg>linkedin.com/in/sreehitha-madiraju</a>
+      <a class="contact-link" href="https://github.com/SreehithaMadiraju" target="_blank"><svg><use href="#i-github"/></svg>github.com/SreehithaMadiraju</a>
+      <a class="btn" style="width:max-content" href="./Sreehitha_Madiraju_Resume.pdf" download><svg><use href="#i-download"/></svg>Download Resume</a>
     </div>
   </div>
-</div>
 </section>
+
+<div class="footer"><span>© 2025 Sreehitha Madiraju. All rights reserved.</span><span>AI/ML × Product × UI/UX</span></div>
 </main>
 
-<footer class="container">
-  <div>© 2026 Sreehitha Madiraju</div>
-  <div>Designed & built with intention.</div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-const nav=document.getElementById('nav');
-const menu=document.querySelector('.menu');
-menu.addEventListener('click',()=>nav.classList.toggle('mobile-open'));
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('mobile-open')));
+const track=document.getElementById("track");
+const cards=[...document.querySelectorAll(".pcard")];
+const dots=document.getElementById("dots");
+let current=2, startX=0, dragging=false;
 
-new Swiper('.projectSwiper',{
-  effect:'coverflow',
-  grabCursor:true,
-  centeredSlides:true,
-  slidesPerView:'auto',
-  spaceBetween:20,
-  loop:true,
-  coverflowEffect:{rotate:12,stretch:0,depth:110,modifier:1.15,slideShadows:false},
-  navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'},
-  pagination:{el:'.swiper-pagination',clickable:true},
-  autoplay:{delay:4500,disableOnInteraction:true}
-});
+function visible(){return innerWidth<=780?1:innerWidth<=1100?3:5}
+function maxStart(){return Math.max(0,cards.length-visible())}
+function cardStep(){return cards[0].getBoundingClientRect().width+10}
+function render(){
+  cards.forEach((c,i)=>c.classList.toggle("is-center",i===current));
+  const v=visible();
+  let offset;
+  if(v===1) offset=current*cardStep()-(document.querySelector(".chain-wrap").clientWidth-cards[0].getBoundingClientRect().width)/2;
+  else offset=Math.max(0,(current-Math.floor(v/2))*cardStep());
+  const maxOffset=Math.max(0,(cards.length-v)*cardStep());
+  offset=Math.min(offset,maxOffset);
+  track.style.transform=`translateX(-${offset}px)`;
+  dots.innerHTML="";
+  cards.forEach((_,i)=>{
+    const d=document.createElement("span");
+    d.className="chain-dot"+(i===current?" active":"");
+    d.onclick=()=>go(i);dots.appendChild(d);
+  });
+}
+function go(i){current=Math.max(0,Math.min(cards.length-1,i));render()}
+document.getElementById("next").onclick=()=>go(current+1);
+document.getElementById("prev").onclick=()=>go(current-1);
+window.addEventListener("resize",render);
+track.addEventListener("pointerdown",e=>{startX=e.clientX;dragging=true;track.setPointerCapture(e.pointerId)});
+track.addEventListener("pointerup",e=>{if(!dragging)return;dragging=false;let dx=e.clientX-startX;if(Math.abs(dx)>45)go(current+(dx<0?1:-1))});
+render();
 
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}
-  })
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const obs=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("show")),{threshold:.08});
+document.querySelectorAll(".reveal").forEach(e=>obs.observe(e));
+const nav=[...document.querySelectorAll(".railnav a")];
+const sec=nav.map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
+const navObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)nav.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-35% 0px -55% 0px"});
+sec.forEach(s=>navObs.observe(s));
 </script>
+
+<script>
+/* Robust pointer swipe for the project chain */
+(function () {
+  function setupProjectSwipe() {
+    const candidates = [
+      '.projects-carousel',
+      '.project-carousel',
+      '.projects-track-wrap',
+      '#projects .carousel',
+      '#projects .projects-viewport',
+      '#projects .project-list'
+    ];
+    let viewport = null;
+    for (const selector of candidates) {
+      viewport = document.querySelector(selector);
+      if (viewport) break;
+    }
+    if (!viewport) return;
+
+    const track =
+      viewport.querySelector('.projects-track, .project-track, .projects-grid') ||
+      document.querySelector('#projects .projects-track, #projects .project-track, #projects .projects-grid');
+
+    if (!track) return;
+
+    viewport.style.overflow = 'hidden';
+    viewport.style.touchAction = 'pan-y';
+    track.style.display = 'flex';
+    track.style.flexWrap = 'nowrap';
+    track.style.width = 'max-content';
+    track.style.userSelect = 'none';
+
+    let startX = 0, startScroll = 0, dragging = false, moved = false;
+
+    const maxScroll = () => Math.max(0, track.scrollWidth - viewport.clientWidth);
+
+    function currentOffset() {
+      return viewport.dataset.projectOffset ? Number(viewport.dataset.projectOffset) : 0;
+    }
+    function setOffset(v) {
+      const clamped = Math.min(0, Math.max(-maxScroll(), v));
+      viewport.dataset.projectOffset = String(clamped);
+      track.style.transform = `translate3d(${clamped}px,0,0)`;
+    }
+
+    viewport.addEventListener('pointerdown', e => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      dragging = true;
+      moved = false;
+      startX = e.clientX;
+      startScroll = currentOffset();
+      viewport.classList.add('is-dragging');
+      viewport.setPointerCapture?.(e.pointerId);
+    });
+
+    viewport.addEventListener('pointermove', e => {
+      if (!dragging) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 5) moved = true;
+      setOffset(startScroll + dx);
+    });
+
+    function end(e) {
+      if (!dragging) return;
+      dragging = false;
+      viewport.classList.remove('is-dragging');
+      try { viewport.releasePointerCapture?.(e.pointerId); } catch (_) {}
+    }
+    viewport.addEventListener('pointerup', end);
+    viewport.addEventListener('pointercancel', end);
+    viewport.addEventListener('lostpointercapture', () => {
+      dragging = false;
+      viewport.classList.remove('is-dragging');
+    });
+
+    // Prevent accidental project-link activation after a real swipe.
+    viewport.addEventListener('click', e => {
+      if (moved) {
+        e.preventDefault();
+        e.stopPropagation();
+        moved = false;
+      }
+    }, true);
+
+    window.addEventListener('resize', () => setOffset(currentOffset()));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupProjectSwipe);
+  } else {
+    setupProjectSwipe();
+  }
+})();
+</script>
+
 </body>
 </html>
